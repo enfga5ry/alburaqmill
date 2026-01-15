@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@theme {
+  --default-font-family: "Playpen Sans Arabic", cursive;
+  --my-h: 600px;
+}
+@layer components {
+  .active {
+    @apply bg-stone-700 text-amber-500;
+  }
+  .menu-item {
+    @apply w-full h-full flex justify-center items-center transition;
+  }
+  .menu-item-hov {
+    @apply text-black bg-gray-100 hover:bg-stone-700  hover:text-amber-600;
+  }
+  .container {
+    @apply pl-4 pr-4 mx-auto;
+  }
+  .product-card {
+    @apply border rounded-xl p-4 cursor-pointer transition-all bg-white shadow-sm;
+  }
+
+  .product-card.active {
+    @apply border-amber-500 shadow-md bg-amber-50;
+  }
+
+  .card-body {
+    @apply flex items-center justify-between gap-4;
+  }
+
+  .qty-input {
+    @apply w-32 border rounded-lg p-2 opacity-0 scale-95 transition-all;
+  }
+
+  .product-card.active .qty-input {
+    @apply opacity-100 scale-100;
+  }
+}
+
+/* mainColor text-amber-500
+secondaryColor text-stone-700 
+backgroundColor bg-gray-100
+cards bg-white shadow
+normalText text-gray-800
+secondaryText text-gray-600 */
